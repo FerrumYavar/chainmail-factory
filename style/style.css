@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
   }
@@ -8,10 +8,14 @@
   .content{
     height: 100%;
   }
+   */
 
 #wrapLogo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 150px;
-    position: static;
+    position: relative;
     width: 100%;
     margin-bottom: 10px;
     background-color: #d6d5d5;
@@ -19,181 +23,25 @@
 }
 
 #logo {
-    margin-top: 7px;
-    position: static;
     display: inline-block;
-    margin-left: 50%;
-    transform: translate(-50%);
 }
 
-.cart{
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    top: 45px;
-    right: 30px;
+.burger {
+   display: inline;
+   width: 50px;
+   height: 50px;
+   position: relative;
+   cursor: pointer;
+   left: 1%;
 }
 
-.cart_quantiti{
-    display: block;
-    position: relative;
-    width: 20px;
-    height: 20px;
-    background-color:rgb(250, 0, 0);
-    border-radius: 50%; 
-    right: 22px;
-    bottom: 50px;
-    text-align: center;
-}   
-
-.cart img{
-    position: relative;
-    width: 50px;
-    cursor: pointer;
-    top: 5px;
-    left: 5px;
-}
-
-.cart img:hover{
-    width: 60px;
-    top: 0px;
-    left: 0px;
-}
-
-.cart_menu{
-    display: none;
-    font-family: cursive;
-    border: 2px solid;
-    border-radius: 5px;
-    position: absolute;
-    padding-right: 3px;
-    height: 500px;
-    width: 500px;
-    background-color:rgb(201, 195, 195);
-    right: -520px;
-    transition: right 0.3s;
-    z-index: 1000;
-}
-
-.cart_menu.cart_animate{
-    display: block;
-    right: 0;
-}
-
-.CartImgElement{
-    height: 90%;
-    padding-left: 0px;
-    padding-top: 0px;
-}
-
-
-
-.cart_list{
-    height: 450px;
-    display: block;
-}
-
-.total_price_wrap {
-    height: 50px;
-    background-color:rgba(77, 75, 75, 0.822);
-    font-size: 40px;
-    text-align: center;
-}
-
-.cart_list_pos{
-    width: 500px;
-    height: 80px;
-    border-bottom: 1px solid;
-    margin-bottom: 5px;
-
-}
-
-.cart_list_pos img{
-    width: 80px;
-    float: left;
-}
-
-.del_pos img{
-    border-radius: 5px;
-    width: 20px;
-    position: absolute;
-    right: 5px;
-    top: 5px;
-}
-
-.del_pos{
-    position: relative;
-    cursor: pointer;
-    background-color:rgb(255, 254, 254);
-    border-radius:50%;
-    width: 30px;
-    height: 30px;
-    right: 10px;
-    bottom: 40px;
-    float: right;
-}
-
-.del_pos:hover{
-    background-color:rgba(85, 81, 81, 0.747);
-
-}
-
-.pos_name{
-    position: relative;
-    left: 5px;
-    top: 5px;
-}
-
-.cart_list_price{
-    position:relative;
-    left: 5px;
-}
-
-.cart_pos_counter{
-    display: block;
-    position: relative;
-    width: 20px;
-    height: 20px;
-    background-color:rgb(250, 0, 0);
-    border-radius: 50%;
-    left: 2px;
-    bottom: 42px;
-}
-
-.cart_pos_counter_value{
-    position: absolute;
-    left: 5px;
-    bottom:1px;
-}
-
-#wrapper {
-    width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#prew {
-    width: 33%;
-    border-radius: 5%;
-    
-}
-
- .burger {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    cursor: pointer;
-}
 
 .burger span, .burger span:before, .burger span:after {
     width: 100%;
     height: 6px;
     position: absolute;
     background: #333;
-    display: block;
+    display: inline;
     transition: .3s;
     border-radius: 5px;
 }
@@ -230,6 +78,192 @@
 
 .burger span.active{
     background: rgba(255,255,255, 0);
+}
+
+
+.cart{
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+
+.cart img{
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 80%;
+    height: 80%;
+    cursor: pointer;
+}
+
+.cart img:hover{
+    width: 90%;
+    height: 90%;
+}
+
+.cart_quantiti{
+    position: absolute;
+    bottom: 100%;
+    left: 38%;
+    display: inline-block;
+    width: 30%;
+    height: 30%;
+    background-color:rgb(250, 0, 0);
+    border-radius: 50%; 
+    text-align: center;
+}   
+
+
+.cart_menu{
+    display: none;
+    font-family: cursive;
+    border: 2px solid;
+    border-radius: 5px;
+    position: absolute;
+    padding-right: 3px;
+    width: 30%;
+    background-color:rgb(201, 195, 195);
+    right: -520px;
+    transition: right 0.3s;
+    z-index: 1000;
+}
+
+.cart_menu.cart_animate{
+    display: block;
+    right: 0;
+}
+
+.total_price_wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color:rgba(77, 75, 75, 0.822);
+    font-size: 40px;
+}
+
+.cartCloseBtn {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(143, 139, 139, 0.432);
+    border-radius: 50%;
+    top: -35px;
+    left: 93%;
+    cursor: pointer;
+}
+
+.cartCloseBtn:before, .cartCloseBtn:after {
+    position: absolute;
+    content: ' ';
+    height: 28px;
+    width: 2px;
+    background-color: #333;
+    }
+    .cartCloseBtn:before {
+    transform: rotate(45deg);
+    }
+    .cartCloseBtn:after {
+    transform: rotate(-45deg);
+    }
+
+    .cartCloseBtn:hover {
+        background-color:rgba(66, 66, 66, 0.822);
+    }
+
+
+.CartImgElement{
+    height: 90%;
+    padding-left: 0px;
+    padding-top: 0px;
+}
+
+
+
+.cart_list{
+    top: 50px;
+}
+
+.cart_list_pos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid;
+    margin-bottom: 5px;
+
+}
+
+.cart_list_pos img{
+    width: 80px;
+    float: left;
+}
+
+.del_pos img{
+    border-radius: 5px;
+    width: 20px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.del_pos{
+    position: relative;
+    cursor: pointer;
+    background-color:rgb(255, 254, 254);
+    border-radius:50%;
+    width: 30px;
+    height: 30px;
+}
+
+.del_pos:hover{
+    background-color:rgba(85, 81, 81, 0.747);
+
+}
+
+.pos_name{
+    position: relative;
+    left: 5px;
+    top: 5px;
+}
+
+.cart_list_price{
+    position:relative;
+    left: 5px;
+}
+
+.cart_pos_counter{
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color:rgb(250, 0, 0);
+    border-radius: 50%;
+}
+
+.cart_pos_counter_value{
+    position: absolute;
+    left: 5px;
+    bottom:1px;
+}
+
+#wrapper {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#prew {
+    width: 33%;
+    border-radius: 5%;
+    
 }
 
 ul{
@@ -286,7 +320,11 @@ ul{
 }
 
 .wrapElement{
-    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    /* height: 150px; */
     margin-bottom: 10px;
     border-top: 3px solid;
     border-color: rgb(92, 91, 91);
@@ -295,13 +333,14 @@ ul{
 .imgElement{
     float: left;
     padding-right: 10px;
-    height: 90%;
+    height: 140px;
     padding-left: 0px;
     padding-top: 10px;
 }
 
 table {
     display: table;
+    width: 30%;
     border-collapse: separate;
     box-sizing: border-box;
     text-indent: initial;
@@ -337,7 +376,6 @@ td{
 }
 
 .add_to_cart{
-    position: absolute;
     background-color:rgb(250, 0, 0);
     height: 30px;
     font-size: 70%;
@@ -346,14 +384,8 @@ td{
     cursor: pointer;
 }
 
-.add_to_cart_active{
-    position: absolute;
+.add_to_cart:hover{
     background-color:rgb(180, 3, 3);
-    height: 30px;
-    font-size: 70%;
-    text-align: center;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 .content {
@@ -368,23 +400,37 @@ footer{
     border-top: 2px solid;
 }
 
-.footerWrap{
+.footerWrap {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: relative;
     height: 70px;
 }
 
-.instagram {
-    width: 30px;
-    position: absolute;
-    right: 20px;
-    margin-top: 20px;
 
+.wrap_instagram {
+    width: 70px;
+    height: 70px;
+    position: relative;
 }
 
-.instagramActive {
-    width: 35px;
+
+.instagram {
     position: absolute;
-    right: 18px;
-    margin-top: 18px;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 60%;
+    height: 60%;
+}
+
+.instagram:hover {
+    width: 70%;
+    height: 70%;
 }
 
 

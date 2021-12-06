@@ -37,19 +37,25 @@ const printQuantiti = () => {
 function generteCartProduct(img, title, price, id) {
     return `
         <div class="cart_list_pos" data-id="${id}">
-            <img src="${img}" class="CartImgElement">
-            <div class="pos_name">
-                ${title}
-            </div>
-            <div class="cart_list_price">
-                <span class="cartElemPrice">${price}</span>
-                <span class="cart_priceCurrency">BYN</span>
-            </div>
-            <div class="cart_pos_counter">
-                <div class="cart_pos_counter_value">
-                    1
+            <div class = "1">
+                <img src="${img}" class="CartImgElement">
+                <div class="cart_pos_counter">
+                    <div class="cart_pos_counter_value">
+                        1
+                    </div>
                 </div>
             </div>
+            
+            <div class = "2">
+                <div class="pos_name">
+                    ${title}
+                </div>
+                <div class="cart_list_price">
+                    <span class="cartElemPrice">${price}</span>
+                    <span class="cart_priceCurrency">BYN</span>
+                </div>
+            </div>
+
             <div class="del_pos", "delBtn">
                 <img src="img/pngegg.png" alt="Удалить" class="delBtn">
             </div>
